@@ -9,14 +9,19 @@ public class program {
         int press = formula(100,2);
         System.out.println("Давление равно");
         System.out.println(press);
+
     }
 
     public static int calculate (int arg1, int  arg2) {
+
         return arg1 + arg2;
     }
 
     public static int formula (int arg3,int arg4) {
         return arg3/arg4;
+        //arg3 Сила
+        //arg4 Площадь
+
 
     }
 }
