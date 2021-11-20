@@ -28,18 +28,3 @@ public class Zadanie4 {
         }
     }
 }
-
-
-
-
- //   public static void calcRoot(){
-  //      double num = 100;
- //       double guess = 6;
-  //      double result = 0;
-  //      while (Math.abs(guess - result) != 0){
-  //          result = (guess + (num / guess)) / 2;
-  //          guess = result;
-  //      }
-  //      System.out.println(result);
-  //  }
-//}
