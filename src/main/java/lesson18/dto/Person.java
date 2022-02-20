@@ -1,12 +1,13 @@
 package lesson18.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
+//@Getter геттер сеттер но арк можно заменить на @Data
+//@Setter
+//@NoArgsConstructor
+//@AllArgsConstructor  использовать только 1 из двух конструкторов
+//@RequiredArgsConstructor
 public class Person {
 
     private String name;
@@ -15,6 +16,7 @@ public class Person {
     private double height;
 
     public  Person(String name){
+
         this.name = name;
     }
 
