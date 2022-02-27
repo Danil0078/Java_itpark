@@ -8,21 +8,21 @@ import java.util.Scanner;
 
 public class TemperatureStarter {
 
-    public static void main(String[] args) {
-        System.out.println("привет, перевот Т");
-        System.out.println("введите температуру:");
-        Scanner scanner = new Scanner(System.in);
-        while (!scanner.hasNextDouble()){
-           String inputValue =  scanner.next();
-           System.out.println("Ожидаем %s ожидаем температуру" + inputValue);
+        public static void main (String[] args) {
+            System.out.println("Добро пожаловать в конвертер. Тут ты сможешь переводить температуру из одной системы в другую");
+            System.out.println("Введи пожалуйста значение для конвертация:");
+            Scanner scanner = new Scanner(System.in);
+            while (!scanner.hasNextDouble()) {
+                String inputValue = scanner.next();
+                System.out.printf("Вместо %s ожидали значение температуры как вещественного числа\n", inputValue);
+            }
+            double value = scanner.nextDouble();
+            System.out.println("Введи пожалуйста исходную систему измерений (возможные варианты - C, K, F):");
+            String temperatureSystem = scanner.next();
+            System.out.println("Введи пожалуйста систему измерений, в которую будет переводено указанное ранее значение (возможные варианты - C, K, F):");
+            String destinationTemperatureSystem = scanner.next();
+            System.out.printf("Результат: %.2f\n", Convertable.convert(value,
+                    Temperature.of(temperatureSystem),
+                    Temperature.of(destinationTemperatureSystem)));
         }
-        double value = scanner.nextDouble();
-        System.out.println("введите температуру: (введите C, F, K)");
-        String temperatureSystem = scanner.next();
-        System.out.println(" Введите температуру в которую будем переводить");
-        String destinationTemperatureSystem = scanner.next();
-        System.out.println(Convertable.convert(value,
-                Temperature.of(temperatureSystem),
-                Temperature.of(destinationTemperatureSystem)));
-    }
 }

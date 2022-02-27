@@ -1,6 +1,6 @@
 package lesson10.zadanie10;
 
-public class KelvinToCelsius implements Convertable{
+public abstract class KelvinToCelsius implements Convertable{
 
     public static final double DELTA = 273.15;
 
